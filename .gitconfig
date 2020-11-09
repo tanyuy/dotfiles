@@ -1,0 +1,4 @@
+[core]
+	editor = atom --wait
+[pager]
+    branch = false
