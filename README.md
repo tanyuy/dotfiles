@@ -2,6 +2,9 @@
 
 ## Installation
 
+1. Generate SSH key and add to Github
+2. Clone `dotfiles` repo and run `setup.sh`
+
 ```bash
 mkdir $HOME/Repos && cd Repos
 git clone git@github.com:tanyuy/dotfiles.git && cd dotfiles && ./setup.sh
