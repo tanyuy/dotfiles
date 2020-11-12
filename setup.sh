@@ -12,8 +12,11 @@ xcode-select —-install
 # Install apps and binaries with Brew
 source brew.sh
 
-# [WIP] oh-my-zsh config
-# source zsh.sh
+# oh-my-zsh config
+source zsh.sh
+
+# Python and virutal env config
+source python.sh
 
 # Create symlinks for dotfiles
 source link-dotfiles.sh
