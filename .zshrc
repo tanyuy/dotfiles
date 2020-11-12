@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Virtual Env path
+export VIRTUALENV_HOME="$HOME/.virtualenvs"
+ 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -71,6 +74,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -127,7 +131,7 @@ else # macOS `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias ls="ls -lF ${colorflag}"
 
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF ${colorflag}"
@@ -135,14 +139,11 @@ alias la="ls -lAF ${colorflag}"
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
-# Always use color output for `ls`
-alias ls="command ls ${colorflag}"
-
 # Shortcuts
 alias dr="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias repo="cd ~/git_repos"
+alias repo="cd ~/Repos"
 alias g="git"
 
 alias zconf="atom ~/.zshrc"
@@ -174,3 +175,9 @@ function mkd() {
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Virtual env activate function
+function activate {
+  source "$VIRTUALENV_HOME/$1/bin/activate"
+}
+
