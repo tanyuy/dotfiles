@@ -24,7 +24,6 @@ source link-dotfiles.sh
 # Set macOS preferences
 # We will run this last because this will reload the shell
 # You only want to run this once during setup. Additional runs may reset changes you make manually.
-echo "Skipping MacOS setup. Please do it manually"
-# source .macos
+source .macos
 
 echo "Mac setup completed!"
