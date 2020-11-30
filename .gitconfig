@@ -2,3 +2,5 @@
     editor = code --wait
 [pager]
     branch = false
+[user]
+	email = tanyu.yuba@gmail.com
